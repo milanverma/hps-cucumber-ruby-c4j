@@ -41,3 +41,8 @@ jobs:
         -F results_file=@cucumber-results.json \
         -F language=ruby
       continue-on-error: true
+      
+      - name: Run Cucumber tests to XML
+      run: |
+       cat cucumber-results.json
+   
