@@ -42,7 +42,13 @@ jobs:
         -F language=ruby
       continue-on-error: true
       
+      
     - name: Run Cucumber tests to XML
       run: |
-        cat cucumber-results.json
+        bundle exec cucumber \
+          --format junit \
+          --out cucumber-results.xml
+    - name: Print cucumber XML results
+      run: |
+        cat cucumber-results.xml
    
