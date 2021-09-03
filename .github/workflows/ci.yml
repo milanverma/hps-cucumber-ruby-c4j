@@ -47,8 +47,8 @@ jobs:
       run: |
         bundle exec cucumber \
           --format junit \
-          --out cucumber-results.junit
+          --out cucumber-results
     - name: Print cucumber XML results
       run: |
-        cat cucumber-results.junit
+        cat cucumber-results/*
    
